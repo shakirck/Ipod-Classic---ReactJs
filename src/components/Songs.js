@@ -4,7 +4,7 @@ export default class Songs extends Component {
   render() {
     const { allsongs, album, playlist, artist, select } = this.props;
     // console.log(allsongs, "ALLSONGS");
-    console.log("SONGS", this.props);
+    // console.log("SONGS", this.props);
     return (
       <div className="songs">
         <h1>songs</h1>

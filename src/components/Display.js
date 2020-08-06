@@ -5,7 +5,7 @@ import Songs from "./Songs";
 
 export default class Display extends Component {
   render() {
-    console.log("Display", this.props);
+    // console.log("Display", this.props);
     const { showMenu, showSubMenu, select } = this.props;
 
     return (

@@ -7,6 +7,7 @@ import React, { Component } from "react";
 export default class App extends Component {
   constructor() {
     super();
+    //state
     this.state = {
       showMenu: false,
       songs: false,
@@ -24,6 +25,7 @@ export default class App extends Component {
   }
   componentDidMount() {}
 
+  //handling clicking on menu btn
   handleClickMenu = () => {
     if (!this.state.select) {
       this.state.showMenu && !this.state.showSubMenu
@@ -41,12 +43,14 @@ export default class App extends Component {
       });
     }
   };
+
+  //handling  active item in menu
   handleActiveItem = (activeItem, notActiveItem) => {
     const active = document.getElementById(activeItem);
     if (!active) {
       return;
     }
-    console.log(active);
+    // console.log(active);
     active.classList = "menu-item active";
 
     let newState = {
@@ -66,8 +70,10 @@ export default class App extends Component {
       ...newState,
     });
   };
+
+  //handling rotation wheel
   handleWheelRotation = (props) => {
-    console.log(this.state);
+    // console.log(this.state);
     // const { showSubMenu, showMenu } = this.state;
 
     const wheel = document.getElementById("circle-outside");
@@ -102,9 +108,10 @@ export default class App extends Component {
     });
   };
 
+  //handling middle btn click
   handleSelectClick = () => {
-    console.log("handle click", this.state);
-    const { select } = this.state;
+    // console.log("handle click", this.state);
+    // const { select } = this.state;
     if (this.state.songs && !this.state.showSubMenu) {
       this.setState({
         showMenu: false,
@@ -117,7 +124,7 @@ export default class App extends Component {
     }
   };
   render() {
-    console.log("State APP", this.state);
+    // console.log("State APP", this.state);
     return (
       <div className="App">
         <Display {...this.state} />

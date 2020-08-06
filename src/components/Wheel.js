@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 export default class Wheel extends Component {
   render() {
-    console.log(this.props);
+    // console.log(this.props);
     const { onRotate, onSelect } = this.props;
     return (
       <div className="wheel-container">
